@@ -1,8 +1,8 @@
 %define realname   Net-Bonjour
 
 Name:		perl-%{realname}
-Version:    0.95
-Release: %mkrel 4
+Version:    0.96
+Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Module for DNS service discovery ( Zeroconf ) 
