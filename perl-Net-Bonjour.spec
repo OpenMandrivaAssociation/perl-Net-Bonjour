@@ -1,19 +1,22 @@
-%define realname   Net-Bonjour
+%define upstream_name    Net-Bonjour
+%define upstream_version 0.96
 
-Name:		perl-%{realname}
-Version:    0.96
-Release: %mkrel 1
-License:	GPL or Artistic
-Group:		Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Module for DNS service discovery ( Zeroconf ) 
-Source0:    http://search.cpan.org/CPAN/authors/id/C/CH/CHLIGE//%{realname}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/C/CH/CHLIGE//%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl-Net-DNS
-BuildArch:      noarch
+BuildArch:  noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 Obsoletes: perl-Net-Rendezvous < 0.90
-Provides: perl-Net-Rendezvous = %version
+Provides:  perl-Net-Rendezvous = %{version}
 
 %description
 Net::Rendezvous is a set of modules that allow one to discover local services 
@@ -22,7 +25,7 @@ method of service discovery has been branded as Rendezvous ( now Bonjour ) by
 Apple Computer.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 yes y | %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -48,4 +51,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
