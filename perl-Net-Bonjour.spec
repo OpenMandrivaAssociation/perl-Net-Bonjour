@@ -39,12 +39,12 @@ perl -pi -e "s/ == 2/ == 11/" t/3-enterprise.t
 make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
-rm -rf $RPM_BUILD_ROOT/%{perl_vendorarch}
+rm -rf %{buildroot}/%{perl_vendorarch}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
