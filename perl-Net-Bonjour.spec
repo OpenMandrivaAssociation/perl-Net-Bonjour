@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	6
 
 Summary:	Module for DNS service discovery ( Zeroconf ) 
 License:	GPL+ or Artistic
