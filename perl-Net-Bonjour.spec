@@ -4,7 +4,7 @@
 Summary:	Module for DNS service discovery ( Zeroconf ) 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	16
+Release:	17
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
