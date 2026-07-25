@@ -3,12 +3,12 @@
 
 Summary:	Module for DNS service discovery ( Zeroconf ) 
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	17
+Version:	%{modver}
+Release:	18
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://search.cpan.org/CPAN/authors/id/C/CH/CHLIGE//%{modname}-%{modver}.tar.bz2
+Url:		https://metacpan.org/dist/Net-Bonjour
+Source0:	https://cpan.metacpan.org/authors/id/C/CH/CHLIGE/Net-Bonjour-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-Net-DNS
